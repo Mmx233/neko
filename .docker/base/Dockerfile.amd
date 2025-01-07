@@ -117,7 +117,7 @@ COPY .docker/base/dbus /usr/bin/dbus
 COPY .docker/base/default.pa /etc/pulse/default.pa
 COPY .docker/base/vaapi/supervisord.conf /etc/neko/supervisord.conf
 COPY .docker/base/xorg.conf /etc/neko/xorg.conf
-COPY .docker/base/ivaapi/add-render-group.sh /usr/bin/add-render-group.sh
+COPY .docker/base/vaapi/add-render-group.sh /usr/bin/add-render-group.sh
 
 #
 # set default envs
