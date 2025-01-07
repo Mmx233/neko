@@ -23,10 +23,10 @@ if [[ "${SERVER_TAG}" == "nvidia-"* ]]; then
   echo "Nvidia GPU acceleration enabled"
 fi
 
-# if image starts with intel- add --device /dev/dri
-if [[ "${SERVER_TAG}" == "intel-"* ]]; then
+# if image starts with intel- or amd- add --device /dev/dri
+if [[ "${SERVER_TAG}" == "intel-"* || "${SERVER_TAG}" == "amd-"* ]]; then
   GPU_FLAG="--device /dev/dri"
-  echo "Intel GPU acceleration enabled"
+  echo "VAAPI GPU acceleration enabled"
 fi
 
 # use --gpus all to enable GPU acceleration
